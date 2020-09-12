@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body {
+      height: 100vh;
+      display:flex;
+      align-items: center;
+      justify-content:space-evenly;
+      flex-direction: column;
+      background-color: #acacb5;
+      
+      
+  }
+.memory-game{
+    display:flex;
+    flex-wrap:wrap;
+    height:340px;
+    width:640px;
+    background-color: rgb(191, 206, 173, 0.8);
+    border-radius:5px;
+    align-items: center;
+    justify-content:center;
+    perspective: 1000px;
+    color:white;
+    font-size:30px;
+    
+    
+    
+}
+.memory-car {
+    width:20%;
+    height:50%;
+    position: relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transform:scale(1);
+    transform-style:preserve-3d;
+    transition: transform .5s;
+    flex-wrap: wrap;
+    
+    
+}
+.memory-car.flip {
+    transform:rotateY(180deg);
+}
+.front-card, .back-card {
+    position: absolute;
+    backface-visibility: hidden;
+}
+.back-card {
+    width:80%;
+    height: 80%;
+}
+.front-card {
+    width:55%;
+    height: 55%;
+    transform:rotateY(180deg);
+}
+button {
+    background:none;
+    outline:none;
+    margin-left:20px;
+    border:1px solid black;
+    cursor:pointer;
+    padding:10px;
+}
+button:hover {
+    background-color:rgb(180, 172, 172);
+}
+
+
+
+
+
+
+
+
+
+
